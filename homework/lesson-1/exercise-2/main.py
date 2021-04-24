@@ -17,5 +17,5 @@ minutes = time_in_seconds % 3600 // 60
 # вычисление количества секунд
 seconds = time_in_seconds % 3600 % 60
 
-# вывод данных
+# вывод
 print(f'{hours:02d}:{minutes:02d}:{seconds:02d}')

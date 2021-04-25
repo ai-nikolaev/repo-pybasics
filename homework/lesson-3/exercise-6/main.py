@@ -19,5 +19,8 @@ def int_func(s):
     return s.capitalize()
 
 
-# вывод
-print(int_func('text'))
+# данные
+VALUE = 'text'
+
+# вывод результата
+print(f"Результат вызова функции int_func('{VALUE}'): {int_func(VALUE)}")

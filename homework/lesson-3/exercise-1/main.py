@@ -31,4 +31,4 @@ while True:
         break
 
 # вывод результата
-print(f'Результат вызова функции: {my_func(v1, v2)}')
+print(f'Результат вызова функции my_func({v1}, {v2}): {my_func(v1, v2)}')

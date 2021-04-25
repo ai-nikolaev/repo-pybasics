@@ -35,5 +35,5 @@ while True:
     else:
         print('Ошибка! Строка должна содержать не менее 2-х слов!')
 
-# вывод
-print(int_func(user_value))
+# вывод результата
+print(f"Результат вызова функции int_func('{user_value}'): {int_func(user_value)}")

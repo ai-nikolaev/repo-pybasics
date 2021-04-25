@@ -1,26 +1,35 @@
 # 2. Выполнить функцию, которая принимает несколько параметров,
 # описывающих данные пользователя: имя, фамилия, год рождения,
-# город проживания, email, телефон. Функция должна принимать
+# город проживания, e, телефон. Функция должна принимать
 # параметры как именованные аргументы. Осуществить вывод данных
 # о пользователе одной строкой.
 
 # реализация функции
-def person_description(name, surname, birthday, city, email, phone):
+def person_description(n, sn, y, c, e, p):
     """
     Выводит данные о пользователе одной строкой.
 
     Именованные параметры:
-    name -- имя пользователя
-    surname -- фамилия пользователя
-    birthday -- год рождения
-    city -- город проживания
-    email -- электронная почта
-    phone -- телефон
+    n -- имя пользователя
+    sn -- фамилия пользователя
+    y -- год рождения
+    c -- город проживания
+    e -- электронная почта
+    p -- телефон
     """
-    return f'{name} {surname} {birthday} {city} {email} {phone}'
+    return f'{n} {sn} {y} {c} {e} {p}'
 
+
+# данные
+NAME = 'Имя'
+SURNAME = 'Фамилия'
+YEAR = 2021
+CITY = 'Город'
+EMAIL = 'email@email.ru'
+PHONE = '123-45-67'
 
 # вывод результата
-print(person_description(name='Имя', surname='Фамилия',
-                         birthday=2021, city='Город',
-                         email='abc@abc.abc', phone='123-45-67'))
+print(
+    f"Результат вызова person_description(n='{NAME}', sn='{SURNAME}', y={YEAR}, c='{CITY}', e='{EMAIL}', p='{PHONE}'):",
+    end=' ')
+print(f"{person_description(n=NAME, sn=SURNAME, y=YEAR, c=CITY, e=EMAIL, p=PHONE)}")

@@ -20,7 +20,7 @@ def int_func(s):
 user_value = ''
 
 while True:
-    user_value = input('Введите строку из слов, разделенных пробелами: ')
+    user_value = input('Введите строку из слов, разделённых пробелами: ')
     values = user_value.split()
     if len(values) > 1:
         for v in values:

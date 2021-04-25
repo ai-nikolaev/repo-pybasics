@@ -11,19 +11,24 @@ def my_func(p_1, p_2):
     p_1 -- делимое
     p_2 -- делитель
 
-    (number, number) -> number or None
+    (number, number) -> number
 
     >>> my_func(10, 10)
     1
-    >>> my_func(10, 0)
-    None
     """
-    if p_2 == 0:
-        print(f'Ошибка! Деление на ноль!')
-        return
     return p_1 / p_2
 
 
-# вывод
-for a, b in [(4, 2), (4, 0)]:
-    print(my_func(a, b))
+# ввод делимого
+v1 = int(input('Введите число (делимое): '))
+
+# ввод делителя
+while True:
+    v2 = int(input('Введите число (делитель): '))
+    if v2 == 0:
+        print(f'Ошибка! Деление на ноль!')
+    else:
+        break
+
+# вывод результата
+print(f'Результат вызова функции: {my_func(v1, v2)}')

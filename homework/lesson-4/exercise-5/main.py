@@ -6,14 +6,16 @@
 
 from functools import reduce
 
+
 # функция вычисления произведения
 def my_func(prev_el, el):
     # prev_el - предыдущий элемент
     # el - текущий элемент
     return prev_el * el
 
+
 # формирование списка
 my_list = [a for a in range(100, 1001) if a % 2 == 0]
 
 # вывод итоговых данных
-print(f'Результат вычисления произведения всех элементов списка: {reduce(my_func, my_list)}')
+print(f'Вывод результата: {reduce(my_func, my_list)}')

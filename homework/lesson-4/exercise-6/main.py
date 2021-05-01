@@ -12,5 +12,11 @@ from random import randint
 from my_count_functions import my_count_func
 from my_cycle_functions import my_cycle_func
 
-print(my_count_func(randint(1, 9)))
-print(my_cycle_func([randint(10, 100) for a in range(randint(1, 9))]))
+# случайное значения
+n = randint(1, 9)
+
+# итератор, генерирующий целые числа, начиная с указанного
+print(f'Вывод результата a): {my_count_func(n)}')
+
+# итератор, повторяющий элементы некоторого списка, определенного заранее
+print(f'Вывод результата б): {my_cycle_func([randint(10, 100) for a in range(n)])}')

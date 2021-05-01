@@ -1,6 +1,7 @@
 from sys import argv
 from itertools import cycle
 
+
 def my_cycle_func(array):
     my_list = []
     c = 0
@@ -11,8 +12,10 @@ def my_cycle_func(array):
         c += 1
     return my_list
 
+
 def my_cycle_show_func(array):
     print(array)
+
 
 try:
     script_name = argv[0]

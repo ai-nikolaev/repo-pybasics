@@ -1,6 +1,7 @@
 from sys import argv
 from itertools import count
 
+
 def my_count_func(number):
     my_list = []
     for el in count(number):
@@ -10,8 +11,10 @@ def my_count_func(number):
             my_list.append(el)
     return my_list
 
+
 def my_count_show_func(array):
     print(array)
+
 
 try:
     script_name = argv[0]

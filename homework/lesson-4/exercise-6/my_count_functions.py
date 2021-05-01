@@ -2,6 +2,7 @@ from sys import argv
 from itertools import count
 
 
+# итератор, генерирующий целые числа, начиная с указанного
 def my_count_func(number):
     my_list = []
     for el in count(number):

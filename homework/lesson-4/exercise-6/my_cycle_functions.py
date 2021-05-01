@@ -2,6 +2,7 @@ from sys import argv
 from itertools import cycle
 
 
+# итератор, повторяющий элементы некоторого списка, определенного заранее
 def my_cycle_func(array):
     my_list = []
     c = 0

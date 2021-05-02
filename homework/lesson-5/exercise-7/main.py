@@ -17,17 +17,18 @@
 
 import json
 
-my_list = [{},{'average_profit': 0}]
+my_list = [{}, {'average_profit': 0}]
 
 with open("text_file.txt", "r", encoding="utf-8") as f_obj1:
     average_profit = 0
     for line in f_obj1:
-        c, d, a, b = line.split()
-        profit = int(a) - int(b)
-        my_list[0].update({c: profit})
-    my_list[1].update({'average_profit': int(sum([a for a in my_list[0].values() if a > 0])/len(my_list[0]))})
+        n, t, p, s = line.split()
+        profit = int(p) - int(s)
+        my_list[0].update({n: profit})
+    my_list[1].update({'average_profit': int(sum([v for v in my_list[0].values() if v > 0]) / len(my_list[0]))})
 
-print(my_list)
+print(f'Вывод списка: {my_list}')
 
-with open("json_file.json", "w", encoding="utf-8") as f_obj2:
+# Вывод json-объекта в файл
+with open("result.json", "w", encoding="utf-8") as f_obj2:
     json.dump(my_list, f_obj2)

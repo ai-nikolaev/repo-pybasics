@@ -7,4 +7,4 @@ with open('my_text_file.txt', 'w') as f_obj:
         line = input("Введите сообщение для записи в файл: ")
         if len(line) == 0 or line.isspace():
             break
-        print(line, file = f_obj)
+        print(line, file=f_obj)

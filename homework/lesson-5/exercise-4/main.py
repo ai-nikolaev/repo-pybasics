@@ -10,8 +10,8 @@
 my_dict = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
 
 with open("text_file.txt") as f_src:
-    with open("new_text_file.txt", "w", encoding="utf-8") as f_dest:
+    with open("new_text_file.txt", "w", encoding="utf-8") as f_dst:
         for line in f_src:
-            for k,v in my_dict.items():
+            for k, v in my_dict.items():
                 line = line.replace(k, v)
-            print(line, end = '', file = f_dest)
+            print(line, end='', file=f_dst)

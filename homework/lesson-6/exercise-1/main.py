@@ -11,24 +11,32 @@
 
 from time import sleep
 from random import randint
+from enum import Enum
+
+class Color(Enum):
+    RED = 1
+    YELLOW = 2
+    GREEN = 3
 
 class TrafficLight:
+    __color = Color.RED
     
     def running(self):
         while True:
             try:
-                self.__color = "красный"
+                self.__color = Color.RED
                 print(f'Сейчас горит "{self.__color}" сигнал светофора.')
-                sleep(7) # ждём 7 секунд
-                self.__color = "желтый"
+                sleep(7)  # ждём 7 секунд
+                self.__color = Color.YELLOW
                 print(f'Сейчас горит "{self.__color}" сигнал светофора.')
-                sleep(2) # ждём 2 секунды
-                self.__color = "зеленый"
+                sleep(2)  # ждём 2 секунды
+                self.__color = Color.GREEN
                 print(f'Сейчас горит "{self.__color}" сигнал светофора.')
-                sleep(randint(2, 7)) # ждём несколько секунд
+                sleep(randint(2, 7))  # ждём несколько секунд
             except KeyboardInterrupt:
                 print('Завершение работы светофора.')
                 break
-        
+
+
 my_traffic_light = TrafficLight()
 my_traffic_light.running()

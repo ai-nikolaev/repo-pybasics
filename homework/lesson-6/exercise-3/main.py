@@ -9,27 +9,30 @@
 # (создать экземпляры класса Position, передать данные, проверить
 # значения атрибутов, вызвать методы экземпляров).
 
-class Worker:  
-    
+class Worker:
+
     def __init__(self):
         self.name = ''
         self.surname = ''
         self.position = ''
         self._income = {"wage": 0, "bonus": 0}
-        
+
+
 class Position(Worker):
-    
+
     def __init__(self, name, surname, position, income):
+        super().__init__()
         self.name = name
         self.surname = surname
         self.position = position
         self._income = income
-    
+
     def get_full_name(self):
         return f'{self.name} {self.surname}'
-    
+
     def get_total_income(self):
         return sum(self._income.values())
+
 
 # сотрудники
 my_worker_1 = Position('Александр', 'Пушкин', 'писатель', {"wage": 35000, "bonus": 50000})

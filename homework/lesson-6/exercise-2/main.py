@@ -10,16 +10,17 @@
 
 # класс дорога
 class Road:
-    
+    # конструктор
     def __init__(self, length, width):
         self._length = length
         self._width = width
         self.__weight = 25
         self.__depth = 5
-    
+
     # метод расчета массы асфальта
     def calculate(self):
         return round((self._width * self._length * self.__weight * self.__depth) / 1000)
+
 
 # экземпляр класса дорога
 road = Road(5000, 20)

@@ -17,27 +17,29 @@
 
 from abc import ABCMeta, abstractmethod
 
-class Odegda(metaclass=ABCMeta):
+class Сlothes(metaclass=ABCMeta):
     
     @abstractmethod
-    def RashodTkami(self):
-        pass
+    def FabricConsumption(self):
+        raise NotImplmentedError
 
-class Palto(Odegda):
+class Coat(Сlothes):
     
-    def __init__(self, razmer):
-        self.__razmer = razmer
+    def __init__(self, size):
+        self.__size = size
     
-    def RashodTkami(self):
-        return (self.__razmer/6.5 + 0.5)
+    @property
+    def FabricConsumption(self):
+        return (self.__size/6.5 + 0.5)
     
-class Kostum(Odegda):
+class Suit(Сlothes):
     
-    def __init__(self, rost):
-        self.__rost = rost
+    def __init__(self, height):
+        self.__height = height
         
-    def RashodTkami(self):
-        return (2 * self.__rost + 0.3)
+    @property
+    def FabricConsumption(self):
+        return (2 * self.__height + 0.3)
 
-print(Palto(3).RashodTkami())
-print(Kostum(3).RashodTkami())
+print(Coat(3).FabricConsumption)
+print(Suit(3).FabricConsumption)
